@@ -3,8 +3,8 @@ steps:
   - name: gcr.io/cloud-builders/gsutil
     volumes:
       - name: 'mavenrepo'
-        path: '~/.m2'
-    args: ['cp', '-r', 'gs://com-mydeveloperplanet-mavenrepo', '.m2']
+        path: '/root/.m2'
+    args: ['cp', '-r', 'gs://com-mydeveloperplanet-mavenrepo', '/root/.m2']
   # Run the Maven build
   - name: maven:3.6.0-jdk-11-slim
     volumes:
@@ -16,5 +16,5 @@ steps:
   - name: gcr.io/cloud-builders/gsutil
     volumes:
       - name: 'mavenrepo'
-        path: '~/.m2'
-    args: ['cp', '-r', '.m2', 'gs://com-mydeveloperplanet-mavenrepo']
+        path: '/root/.m2'
+    args: ['cp', '-r', '/root/.m2', 'gs://com-mydeveloperplanet-mavenrepo']

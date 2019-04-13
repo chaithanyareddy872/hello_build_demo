@@ -14,7 +14,7 @@ steps:
     args: ['clean', 'install', '-DskipTests']
   # Preserve the Maven dependencies into the bucket
   - name: gcr.io/cloud-builders/gsutil
-      volumes:
-          - name: 'mavenrepo'
-            path: '.m2'
-      args: ['cp', '-r', '.m2', 'gs://com-mydeveloperplanet-mavenrepo']
+    volumes:
+      - name: 'mavenrepo'
+        path: '.m2'
+    args: ['cp', '-r', '.m2', 'gs://com-mydeveloperplanet-mavenrepo']

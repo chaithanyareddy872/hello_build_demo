@@ -1,4 +1,7 @@
 steps:
   - name: maven:3.6.0-jdk-11-slim
+    volumes:
+      - name: 'maven-repo'
+        path: '/root/.m2'
     entrypoint: 'mvn'
     args: ['clean', 'install', '-DskipTests']

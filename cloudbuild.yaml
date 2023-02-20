@@ -7,4 +7,6 @@ steps:
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/mygcpcloudbuildplanet', '.']
 # images
 images: ['gcr.io/$PROJECT_ID/mygcpcloudbuildplanet']
+options:
+  logging: CLOUD_LOGGING_ONLY
 

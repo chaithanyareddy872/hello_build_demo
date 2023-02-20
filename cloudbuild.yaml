@@ -4,9 +4,9 @@ steps:
     entrypoint: 'mvn'
     args: ['clean', 'install', '-DskipTests']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/My First Project/mygcpcloudbuildplanet', '.']
+    args: ['build', '-t', 'gcr.io/effortless-gate-371410/mygcpcloudbuildplanet', '.']
 # images
-images: ['gcr.io/My First Project/mygcpcloudbuildplanet']
+images: ['gcr.io/effortless-gate-371410/mygcpcloudbuildplanet']
 options:
   logging: CLOUD_LOGGING_ONLY
 
